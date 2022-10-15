@@ -1,0 +1,15 @@
+export enum MessageCategory {
+    Question = "Question",
+    Consult = "Consult",
+    Billing = "Billing",
+    Complaint = "Complaint",
+    Compliment = "Compliment",
+    Davey = "Message From Davey",
+    RenewAcceptance = "Renewal Acceptance",
+    RenewRejection = "Renewal Rejection",
+    RenewDiscuss = "Need to Discuss Renewal",
+    PropAcceptance = "Proposal Acceptance",
+    PropRejection = "Proposal Rejection",
+    PropDiscuss = "Neeed to Discuss Proposal",
+    None = "None",
+}
