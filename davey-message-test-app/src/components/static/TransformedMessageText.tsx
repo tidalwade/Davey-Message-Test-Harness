@@ -4,7 +4,7 @@ import { MessageCategory } from "../../types";
 import { formRegExps } from "../../services/RegexService";
 
 interface TransformedMessageTextProps {
-    messageText: string;
+    messageText: Element;
     category: MessageCategory;
 }
 
@@ -162,11 +162,9 @@ const TransformedMessageText: React.FC<TransformedMessageTextProps> = ({
     //         );
     //     }
     // }
+    console.log('MESSAGETEXT: ', messageText)
     return (
-        <Typography
-            color="textPrimary"
-            variant="body2"
-        >{`${messageText}`}</Typography>
+        <>{messageText}</>
     );
 };
 

@@ -14,6 +14,7 @@ import StandardProposalFrom from "./ProposalForms/StandardProposalForm";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 import CustomAlert from "../static/CustomAlert";
 import DefaultRenewalForm from "./ProposalForms/DefaultRenewalForm";
 import EVGRenewalForm from "./ProposalForms/EVGRenewalForm";
@@ -145,15 +146,29 @@ const ProposalFormSet: React.FC<ProposalFormSetProps> = ({ setMessage }) => {
         if (reasonForDecline !== ReasonForDecline.None) {
             declineReasonText = `Reason For Decline: ${reasonForDecline}`;
         }
-        const messageText =
-            mainResponse +
-            " " +
-            proposalInfo +
-            " " +
-            declineReasonText +
-            " " +
-            formComments;
-        return messageText;
+        // const messageText =
+        //     mainResponse +
+        //     " " +
+        //     proposalInfo +
+        //     " " +
+        //     declineReasonText +
+        //     " " +
+        //     formComments;
+        // return messageText;
+        return (
+            <Typography
+                color="textPrimary"
+                variant="body2"
+            >
+                {mainResponse}
+                <br />
+                {proposalInfo}
+                <br />
+                {declineReasonText}
+                <br />
+                {formComments}
+            </Typography>
+        )
     };
 
     const constructAndSendMessage = () => {

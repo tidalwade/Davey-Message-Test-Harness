@@ -16,11 +16,15 @@ const MessageItem: React.FC<MessageItemProps> = ({ message }) => {
         ? message.category
         : MessageCategory.None;
     const sentDate: Date = message ? message.sentDate : new Date();
-    const messageText: string = message ? message.messageText : "";
+    const messageText: Element = message ? message.messageText : "";
+
+    console.log('messageText: ', messageText)
 
     return (
         <Card style={{ width: "100%", height: "46.5vh", padding: 20 }}>
             <ListItemText
+                disableTypography={true}
+                className="thisClass"
                 style={{
                     textAlign: isFromDavey ? "left" : "right",
                 }}

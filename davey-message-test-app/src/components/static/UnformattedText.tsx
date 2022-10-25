@@ -17,13 +17,15 @@ const UnformattedText: React.FC<UnformattedTextProps> = ({ message }) => {
         setMessageText(message ? message.messageText : "");
     }, [message]);
 
+    console.log('unformatted MessageText: ', message)
+
     return (
         <Card style={{ height: "46.5vh" }}>
             <CardContent style={{ textAlign: "initial" }}>
                 <Typography variant="h5" gutterBottom>
                     Unformatted Message Text
                 </Typography>
-                <Typography variant="body1">{messageText}</Typography>
+                    {messageText}
             </CardContent>
         </Card>
     );
