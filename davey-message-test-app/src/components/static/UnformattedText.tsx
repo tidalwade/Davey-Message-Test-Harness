@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { Message } from "../../types";
+import parse from 'html-react-parser';
 
 interface UnformattedTextProps {
     message: Message | undefined;
@@ -23,7 +24,7 @@ const UnformattedText: React.FC<UnformattedTextProps> = ({ message }) => {
                 <Typography variant="h5" gutterBottom>
                     Unformatted Message Text
                 </Typography>
-                <Typography variant="body1">{messageText}</Typography>
+                <Typography variant="body1">{parse(messageText)}</Typography>
             </CardContent>
         </Card>
     );

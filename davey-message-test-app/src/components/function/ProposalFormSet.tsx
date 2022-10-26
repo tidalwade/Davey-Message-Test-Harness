@@ -146,13 +146,12 @@ const ProposalFormSet: React.FC<ProposalFormSetProps> = ({ setMessage }) => {
             declineReasonText = `Reason For Decline: ${reasonForDecline}`;
         }
         const messageText =
-            mainResponse +
-            " " +
-            proposalInfo +
-            " " +
-            declineReasonText +
-            " " +
-            formComments;
+            `${mainResponse} <br /> ${proposalInfo} <br /> ${declineReasonText} <br /> ${formComments}`
+
+            console.log('mainResponse: ', mainResponse)
+            console.log('proposalInfo: ', proposalInfo)
+            console.log('declineReasonText: ', declineReasonText)
+            console.log('formComments: ', formComments)
         return messageText;
     };
 

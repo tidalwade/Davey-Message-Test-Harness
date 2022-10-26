@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { MessageCategory } from "../../types";
+import parse from 'html-react-parser';
 import { formRegExps } from "../../services/RegexService";
 
 interface TransformedMessageTextProps {
@@ -166,7 +167,8 @@ const TransformedMessageText: React.FC<TransformedMessageTextProps> = ({
         <Typography
             color="textPrimary"
             variant="body2"
-        >{`${messageText}`}</Typography>
+        >{parse(messageText)}
+        </Typography>
     );
 };
 
